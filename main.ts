@@ -5,8 +5,11 @@
 // /output/board.json, and copies this repository's dashboard/ and screenshots/ to /output. Last, it
 // writes /output/dossier.json, the summary the judge reads, with the vendored make.fun library.
 //
-// The dashboard is a static page, no framework and no network: dashboard/index.html, dashboard/app.css
-// and dashboard/app.js read /output/data.js, which this program writes from the same board. The page
+// The model (radar-3) prices each protocol at its TVL times a value multiple: the category's
+// median market-cap-to-TVL ratio across live-token protocols, shrunk toward the whole market's
+// median, then adjusted for seven-day growth, age with no token, and chain breadth. The dashboard
+// is a static page, no framework and no network: dashboard/index.html, dashboard/app.css and
+// dashboard/app.js read /output/data.js, which this program writes from the same board. The page
 // recomputes every row's implied value from the snapshot figures, so the code and the data agree.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
